@@ -1,0 +1,13 @@
+.pagination-container {
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}   
+
+.pagination-dropdown {
+    align-items: center;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+}

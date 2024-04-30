@@ -1,0 +1,57 @@
+import React from "react";
+const Thumbail = (props) => {
+
+    const getImageURl = (imagedetails) =>{
+        if(imagedetails.type == 'application/pdf'){
+           return { 'background-image': `url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KICA8ZyBpZD0iR3JvdXBfMzM5OTkiIGRhdGEtbmFtZT0iR3JvdXAgMzM5OTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTY3IC01MDgpIj4KICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMTI1MDUiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyNTA1IiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTY3IDUwOCkiIGZpbGw9IiNmZmYiLz4KICAgIDxnIGlkPSJucF9wZGZfNzQ5NTEzXzAwMDAwMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE2My4yMTggNTExKSI+CiAgICAgIDxwYXRoIGlkPSJQYXRoXzUxNTIxIiBkYXRhLW5hbWU9IlBhdGggNTE1MjEiIGQ9Ik0zOC4wMzMsMjguNjMxYy0uNjY5LS43NDYtMS4zMjktMS41NzktMS45MjQtMi4zMjgtLjI4MS0uMzU0LS41NDktLjY5Mi0uOC0xbC0uMDE4LS4wMjJhMTAuNSwxMC41LDAsMCwwLC42MjUtMi41NDdjLjExOS0xLjYzOS0uMDY0LTIuNy0uNTYtMy4yMjhhMS4yMzEsMS4yMzEsMCwwLDAtMS4zMS0uMzI2QTEuNzMsMS43MywwLDAsMCwzMi45ODksMjAuNGE2LjU5LDYuNTksMCwwLDAsLjkwOCw1LjA2OSwzNy41NzQsMzcuNTc0LDAsMCwxLTEuOTQ5LDQuMjA3LDkuMjc1LDkuMjc1LDAsMCwwLTMuNDQyLDEuOTljLTEuMDg2LDEuMDYtMS41MjYsMi4xMTEtMS4yMTEsMi44ODVhMS4yNDIsMS4yNDIsMCwwLDAsMS4yLjc2NSwyLjI2OCwyLjI2OCwwLDAsMCwxLjIxNy0uNDA2YzEuMDI4LS42NzIsMi4zNjktMi45MTEsMy4wOS00LjIwOGExOS4xMzksMTkuMTM5LDAsMCwxLDMuNzA3LS43MjhjLjMzOC0uMDMzLjY3NC0uMDU4LDEtLjA3NmE2Ljc3MSw2Ljc3MSwwLDAsMCwzLjM2NCwyLjI5MiwzLjE4OSwzLjE4OSwwLDAsMCwuNTkuMDU2LDEuOTgsMS45OCwwLDAsMCwxLjc3Ni0uODU3LDEuMjcsMS4yNywwLDAsMC0uMDEzLTEuM2MtLjU0Ny0uOTQ3LTIuMi0xLjQ2OC00LjY0Ny0xLjQ2OC0uMTc2LDAtLjM1OCwwLS41NDcuMDA2Wm0tOSw1LjIzN2ExLjEsMS4xLDAsMCwxLS41MzUuMi4yMzMuMjMzLDAsMCwxLS4wNTYtLjAwNmMtLjAyNS0uMTI0LjA2NC0uNjYxLjkzMy0xLjUxYTYuNTkxLDYuNTkxLDAsMCwxLDEuNTM2LTEuMDg1LDkuMjUxLDkuMjUxLDAsMCwxLTEuODc5LDIuNFptNS4xMzctMTMuMDgyYy4wOS0uMjc4LjItLjQuMjc0LS40MjZoMGMuMDY4LjA3Ni4zNTQuNTExLjIyNiwyLjI4NmE2LjI4MSw2LjI4MSwwLDAsMS0uMjI1LDEuMTY3LDQuOTE5LDQuOTE5LDAsMCwxLS4yNzktMy4wMjVabTIuMjIyLDcuOTVhMjEuMTA3LDIxLjEwNywwLDAsMC0yLjguNDYxYy40MzYtLjg3MS44NC0xLjc1NCwxLjE3OC0yLjU3Mi4xMTcuMTQ2LjIzNi4zLjM1OC40NTEuNDA3LjUxMi44NjQsMS4wOSwxLjMzOSwxLjY1M1ptNS43NTYsMS45NzZjLjAxOC4wMzIuMDE4LjA0NC4wMTQuMDUzYS44NjUuODY1LDAsMCwxLS43LjIzNSwxLjk4NywxLjk4NywwLDAsMS0uMzY0LS4wMzUsNC4xMjYsNC4xMjYsMCwwLDEtMS44MjYtMS4wODNjMS45MzcuMDkzLDIuNzE5LjU2LDIuODc2LjgzMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04IC05LjA5NSkiIGZpbGw9IiNjYzAxMTkiLz4KICAgICAgPHBhdGggaWQ9IlBhdGhfNTE1MjIiIGRhdGEtbmFtZT0iUGF0aCA1MTUyMiIgZD0iTTMyLjY3MSw1aC0xNi4xYTEuNzg5LDEuNzg5LDAsMCwwLTEuNzg5LDEuNzg5VjM1LjIxMUExLjc4OSwxLjc4OSwwLDAsMCwxNi41NzEsMzdIMzguMDM2YTEuNzg5LDEuNzg5LDAsMCwwLDEuNzg5LTEuNzg5VjEyLjE1NlptMCwyLjUyOUwzNy4zLDEyLjE1NkgzMi42NzFabTUuMzY3LDI3LjY4MkgxNi41NzFWNi43ODlIMzAuODgydjUuMzY3YTEuNzg5LDEuNzg5LDAsMCwwLDEuNzg5LDEuNzg5aDUuMzY3WiIgZmlsbD0iI2NjMDExOSIvPgogICAgICA8cGF0aCBpZD0iUGF0aF81MTUyMyIgZGF0YS1uYW1lPSJQYXRoIDUxNTIzIiBkPSJNMzUuODQsNjguN2ExLjI4NCwxLjI4NCwwLDAsMC0uNTIxLS4yNzgsMy4yNDgsMy4yNDgsMCwwLDAtLjgzOC0uMDg1aC0xLjE5YS43MjMuNzIzLDAsMCwwLS41MDguMTU2LjY2NS42NjUsMCwwLDAtLjE2OS41djMuNTMyYS42OS42OSwwLDAsMCwuMTUxLjQ3Ni41NTIuNTUyLDAsMCwwLC44LDAsLjY5My42OTMsMCwwLDAsLjE1NC0uNDgyVjcxLjMxMmguNzYxYTIuMDUsMi4wNSwwLDAsMCwxLjM0Mi0uMzgyLDEuNCwxLjQsMCwwLDAsLjQ2NC0xLjEyOSwxLjY1MiwxLjY1MiwwLDAsMC0uMTEyLS42MjQsMS4yNjIsMS4yNjIsMCwwLDAtLjMzNS0uNDc5Wm0tLjc2OSwxLjQ3NmEuNTQ0LjU0NCwwLDAsMS0uMjkuMTkzLDEuNzgsMS43OCwwLDAsMS0uNTIyLjA2NWgtLjUzNlY2OS4yMWguNTM2Yy40ODMsMCwuNjc5LjEuNzU3LjE3NWEuNi42LDAsMCwxLC4xNTQuNDMzLjU4Ny41ODcsMCwwLDEtLjEuMzU2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExLjQ5MiAtNDAuODE2KSIgZmlsbD0iI2NjMDExOSIvPgogICAgICA8cGF0aCBpZD0iUGF0aF81MTUyNCIgZGF0YS1uYW1lPSJQYXRoIDUxNTI0IiBkPSJNNDcuOTkyLDY4Ljc3M2ExLjU3LDEuNTcsMCwwLDAtLjY0OS0uMzQ3LDMuMzcyLDMuMzcyLDAsMCwwLS44MzItLjA5SDQ1LjNhLjU3MS41NzEsMCwwLDAtLjY1Ny42NTd2My4zNmExLjQ3NywxLjQ3NywwLDAsMCwuMDQyLjM4NS40MzkuNDM5LDAsMCwwLC4yMDcuMjY4LjgxOC44MTgsMCwwLDAsLjQyNi4wOWgxLjIxYTMuNjk0LDMuNjk0LDAsMCwwLC41ODItLjA0MiwxLjksMS45LDAsMCwwLC40OTMtLjE0NywxLjY3OSwxLjY3OSwwLDAsMCwuNDI2LS4yODEsMi4wMDksMi4wMDksMCwwLDAsLjQtLjUxMSwyLjMyMywyLjMyMywwLDAsMCwuMjMxLS42MzksMy43ODcsMy43ODcsMCwwLDAsLjA3NC0uNzcyLDIuNDEyLDIuNDEyLDAsMCwwLS43NDYtMS45MzFabS0uODA4LDMuMjEzYS42NDMuNjQzLDAsMCwxLS4yMTUuMTI0LDEuMDIzLDEuMDIzLDAsMCwxLS4yNS4wNTdxLS4xMjcuMDEzLS4zNTQuMDEzaC0uNjE0VjY5LjI0N2guNTI0YTIuNDA4LDIuNDA4LDAsMCwxLC43LjA4OS44Mi44MiwwLDAsMSwuNDU0LjM5LDEuOTIsMS45MiwwLDAsMSwuMTkyLjk2OSwxLjYxNCwxLjYxNCwwLDAsMS0uNDM1LDEuMjlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTkuMjQ1IC00MC44MTYpIiBmaWxsPSIjY2MwMTE5Ii8+CiAgICAgIDxwYXRoIGlkPSJQYXRoXzUxNTI1IiBkYXRhLW5hbWU9IlBhdGggNTE1MjUiIGQ9Ik02MC43NCw2OC4zMzZINTguNTUyYS44Ni44NiwwLDAsMC0uMzYxLjA2Ny40NTguNDU4LDAsMCwwLS4yMjkuMjI4Ljg0Ny44NDcsMCwwLDAtLjA2OC4zNjR2My41MjVhLjY5Mi42OTIsMCwwLDAsLjE1My40ODUuNTU4LjU1OCwwLDAsMCwuOCwwQS43LjcsMCwwLDAsNTksNzIuNTE4VjcxLjFoMS40MzlhLjU1Ni41NTYsMCwwLDAsLjM3NS0uMTE1LjQ0Ni40NDYsMCwwLDAsMC0uNjM5LjU0My41NDMsMCwwLDAtLjM3OC0uMTE5SDU5di0uOTk0aDEuNzM5YS41NTcuNTU3LDAsMCwwLC4zOS0uMTIyLjQ1NC40NTQsMCwwLDAsMC0uNjUuNTU2LjU1NiwwLDAsMC0uMzg3LS4xMjFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjcuNzg0IC00MC44MTcpIiBmaWxsPSIjY2MwMTE5Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K")`}
+        } else if(imagedetails.type == 'application/vnd.ms-excel' || imagedetails.type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+            return { 'background-image': `url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KICA8ZyBpZD0iR3JvdXBfMzQwMDAiIGRhdGEtbmFtZT0iR3JvdXAgMzQwMDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTY3IC01MDgpIj4KICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMTI1MDUiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyNTA1IiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTY3IDUwOCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJucF9leGNlbF8xNTAwNTVfMDAwMDAwIiBkPSJNMjIuNTE2LDIwdjYuMzIzSDE4VjQyLjU4MWg0LjUxNlY0Ny4xSDQ2VjIwWm0wLDEwLjgzOUgyNC45MWwxLjIxOSwxLjgwNiwxLjIxOS0xLjgwNmgyLjM5NGwtMi4zOTQsMy42MTMsMi4zOTQsMy42MTNIMjcuMzQ4bC0xLjIxOS0xLjgwNkwyNC45MSwzOC4wNjVIMjIuNTE2bDIuMzk0LTMuNjEzWk00NC4xOTQsNDUuMjlIMjQuMzIzdi0yLjcxaDkuOTM1VjM3LjE2MWg3LjIyNlYzNS4zNTVIMzQuMjU4VjMzLjU0OGg3LjIyNlYzMS43NDJIMzQuMjU4VjI5LjkzNWg3LjIyNlYyOC4xMjlIMzQuMjU4VjI2LjMyM0gyNC4zMjNWMjEuODA2SDQ0LjE5NFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNTkgNDk5KSIgZmlsbD0iIzA5ODg3MSIvPgogIDwvZz4KPC9zdmc+Cg==")`}
+        }  else if(imagedetails.type == 'application/msword' || imagedetails.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+            return { 'background-image': `url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KICA8ZyBpZD0iR3JvdXBfMzQwMDEiIGRhdGEtbmFtZT0iR3JvdXAgMzQwMDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTY3IC01MDgpIj4KICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMTI1MDUiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyNTA1IiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTY3IDUwOCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJucF9kb2MtZmlsZV8yNDEzNjkyXzAwMDAwMCIgZD0iTTE3LjUsMjIuNzU4VjE2LjU3MUgyOHY2LjE4N1ptMCwuNUgyOHY1LjgxM2EuNS41LDAsMCwxLS41LjVINy41YS41LjUsMCwwLDEtLjUtLjV2LTNoOS43NWEuNzUuNzUsMCwwLDAsLjc1LS43NVptMC03LjE4N1Y5Ljg4M0gyOHY2LjE4N1ptMC02LjY4N1Y3LjgyMWEuNzUuNzUsMCwwLDAtLjc1LS43NUg3di0zYS41LjUsMCwwLDEsLjUtLjVoMjBhLjUuNSwwLDAsMSwuNS41VjkuMzg0Wk0uNzUxLDguNTcxaDE0LjVBLjc1Ljc1LDAsMCwxLDE2LDkuMzJ2MTQuNWEuNzUuNzUsMCwwLDEtLjc1Ljc0OUguNzUxQS43NS43NSwwLDAsMSwwLDIzLjgyMVY5LjMyQS43NS43NSwwLDAsMSwuNzUxLDguNTcxWm0xLjI1LDMsMi40MiwxMGgxLjY2bDEuODgtNy42NDZoLjAyNkw5LjgyOSwyMS41N2gxLjYzNWwyLjUzNi0xMEgxMi4zNjVsLTEuNzEzLDcuNjQ2aC0uMDI1bC0xLjgtNy42NDZINy4xNzZMNS4zMjIsMTkuMjE4SDUuM2wtMS42Ni03LjY0NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNzcgNTE1LjQzKSIgZmlsbD0iIzAwNjZiZSIgZmlsbC1ydWxlPSJldmVub2RkIi8+CiAgPC9nPgo8L3N2Zz4K")`}
+        } else {
+            return { 'background-image': `url(${URL.createObjectURL(imagedetails)})`}
+        }
+    }
+
+
+    return (
+        <React.Fragment>
+            <div onClick={() => props.onImageClick()} className="uploaded-images-container shadow">
+                <span class="delete-status z-1" onClick={(e) => { e.stopPropagation(); props.removeFile(props.index) }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g id="delete-icn-16" transform="translate(-180.258 -281.937)">
+                            <g id="Group_14567" data-name="Group 14567" transform="translate(184.594 285.937)">
+                                <path id="Union_135" data-name="Union 135" d="M2.051,8A1.136,1.136,0,0,1,.937,6.849V1.6H.268a.274.274,0,0,1,0-.548H2.211V.975A.975.975,0,0,1,2.485.288.931.931,0,0,1,3.154,0H4.343a.962.962,0,0,1,.945.976v.077H7.06a.274.274,0,0,1,0,.548h-.5V6.849A1.136,1.136,0,0,1,5.447,8ZM1.466,6.848a.6.6,0,0,0,.584.6h3.4a.6.6,0,0,0,.584-.6V1.6H1.466ZM2.742.976v.076H4.757V.976A.421.421,0,0,0,4.343.548H3.154A.423.423,0,0,0,2.742.976Zm2.18,5.846a.285.285,0,0,1-.269-.3V3.262a.284.284,0,0,1,.269-.274h.01a.283.283,0,0,1,.28.273V6.546a.284.284,0,0,1-.28.276Zm-1.184,0a.285.285,0,0,1-.269-.3V3.261a.279.279,0,1,1,.559,0V6.546a.284.284,0,0,1-.28.276Zm-1.183,0a.286.286,0,0,1-.269-.3V3.261a.28.28,0,1,1,.559,0V6.546a.284.284,0,0,1-.28.276Z" transform="translate(0 0)" fill="#3f3f3f" />
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+                <div className="uploaded-image" style={getImageURl(props.imageurl)}></div>
+            </div>
+        </React.Fragment>
+    )
+}
+
+export const PreviousImage = (props) => {
+    return (
+        <React.Fragment>
+
+            <div onClick={() => props.onImageClick()} className="uploaded-images-container shadow">
+                {props.previousFilesHistoryDeleteAction ?
+                    <span class="delete-status" onClick={(e) => { e.stopPropagation(); props.deleteSavedFile(props.index) }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g id="delete-icn-16" transform="translate(-180.258 -281.937)">
+                                <g id="Group_14567" data-name="Group 14567" transform="translate(184.594 285.937)">
+                                    <path id="Union_135" data-name="Union 135" d="M2.051,8A1.136,1.136,0,0,1,.937,6.849V1.6H.268a.274.274,0,0,1,0-.548H2.211V.975A.975.975,0,0,1,2.485.288.931.931,0,0,1,3.154,0H4.343a.962.962,0,0,1,.945.976v.077H7.06a.274.274,0,0,1,0,.548h-.5V6.849A1.136,1.136,0,0,1,5.447,8ZM1.466,6.848a.6.6,0,0,0,.584.6h3.4a.6.6,0,0,0,.584-.6V1.6H1.466ZM2.742.976v.076H4.757V.976A.421.421,0,0,0,4.343.548H3.154A.423.423,0,0,0,2.742.976Zm2.18,5.846a.285.285,0,0,1-.269-.3V3.262a.284.284,0,0,1,.269-.274h.01a.283.283,0,0,1,.28.273V6.546a.284.284,0,0,1-.28.276Zm-1.184,0a.285.285,0,0,1-.269-.3V3.261a.279.279,0,1,1,.559,0V6.546a.284.284,0,0,1-.28.276Zm-1.183,0a.286.286,0,0,1-.269-.3V3.261a.28.28,0,1,1,.559,0V6.546a.284.284,0,0,1-.28.276Z" transform="translate(0 0)" fill="#3f3f3f" />
+                                </g>
+                            </g>
+                        </svg>
+                    </span> : null}
+                <div className="uploaded-image" style={{ backgroundImage: `url(${props.imageObject.thumbnailPath})` }}>
+                </div>
+
+            </div>
+        </React.Fragment>
+    )
+}
+export default Thumbail

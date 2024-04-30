@@ -1,0 +1,2 @@
+import*as t from"react";import{useContext as r}from"react";import"react/jsx-runtime";const n=t.createContext({prefixes:{},breakpoints:["xxl","xl","lg","md","sm","xs"],minBreakpoint:"xs"});function e(t,e){const{prefixes:o}=r(n);return t||o[e]||e}function o(){const{breakpoints:t}=r(n);return t}function s(){const{minBreakpoint:t}=r(n);return t}function i(){const{dir:t}=r(n);return"rtl"===t}export{i as a,o as b,s as c,e as u};
+//# sourceMappingURL=ThemeProvider-7619b1ec.js.map

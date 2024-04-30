@@ -1,0 +1,142 @@
+@use "sass:map";
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import 'custom-variables';
+@import 'custom-mixins';
+
+$custom-theme-colors: (
+    'brand' : $brand,
+    'dark'  : $gray-800,
+    'primary'  : $blue,
+    'success': $green-900,
+    'warning': $warning,
+    'secondarylight':$gray-300
+
+) !default;
+
+$theme-colors : map.merge($theme-colors , $custom-theme-colors);
+$enable-negative-margins: true !default;
+
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+      @if map.has-key($custom-colors , $color)  {
+        @include button-variant(
+            $value ,
+            $value,
+            $color : map.get(map.get($custom-colors, $color),"text-color"),
+            $hover-background:map.get(map.get($custom-colors, $color),"hover"),
+            $hover-border: map.get(map.get($custom-colors, $color),"hover"),
+            $hover-color:map.get(map.get($custom-colors, $color),"text-color"),
+            $active-background:map.get(map.get($custom-colors, $color),"Active"),
+            $active-border:map.get(map.get($custom-colors, $color),"ActiveBorder"),
+            $active-color:map.get(map.get($custom-colors, $color),"text-color"),
+            $disabled-background:map.get(map.get($custom-colors, $color),"Disabled"),
+            $disabled-color:map.get(map.get($custom-colors, $color),"text-color"),
+        );
+        @include button-hover-radial-out($value,map.get(map.get($custom-colors, $color),"hover"),map.get(map.get($custom-colors, $color),"text-color"))
+      } 
+       @else {
+        @include button-variant($value, $value);
+        $hover-background: if($color ==$color-contrast-light, shade-color($value, 90%), tint-color($value, 20%));
+        @include button-hover-radial-out($value, $hover-background , $white)          
+      }
+    }
+}
+
+.btn-link{
+    $link-decoration: none;
+    text-decoration: $link-decoration !important;
+
+    &:hover,
+    &:focus-visible {
+        background: $gray-50
+    }
+}
+
+$enable-negative-margins: true !default; 
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+
+@each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @if map.has-key($custom-colors , $color)  {
+      @include button-outline-variant($value,
+          $color-hover: map.get(map.get($custom-colors, $color), "text-color"),
+          $active-background: map.get(map.get($custom-colors, $color), "Active"),
+          $active-border: map.get(map.get($custom-colors, $color), "ActiveBorder"),
+          $active-color: map.get(map.get($custom-colors, $color), "text-color")
+          );
+          @include button-hover-radial-out(transparent, $value , map.get(map.get($custom-colors, $color), "text-color"))    
+      }
+      @else {
+        @include button-outline-variant($value);
+        $hover-background: if($color ==$color-contrast-light, shade-color($value, 90%), tint-color($value, 20%));
+        @include button-hover-radial-out(transparent, $hover-background , $white)          
+      }
+    }
+}
+
+@each $state, $value in $theme-colors {
+    $alert-background: shift-color($value, $alert-bg-scale-custom);
+    $alert-border: shift-color($value, $alert-border-scale-custom);
+    $alert-color: shift-color($value, $alert-color-scale-custom);
+  
+    @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+      $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale-custom));
+    }
+    .alert-#{$state} {
+       @include alert-variant($alert-background, $alert-border, $alert-color);
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .link-#{$color} {
+      color: $value !important; // stylelint-disable-line declaration-no-important
+  
+      @if $link-shade-percentage != 0 {
+        &:hover,
+        &:focus {
+          color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage)) !important; // stylelint-disable-line declaration-no-important
+        }
+      }
+      @include button-hover-radial-out(transparent,  $gray-50 , $white)  
+    }
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    --bs-primary-rgb:28, 63, 253;
+    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-success {
+    --bs-text-opacity: 1;
+    --bs-success-rgb:17, 176,148;
+    color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-warning {
+    --bs-text-opacity: 1;
+    --bs-warning-rgb:248, 132, 65;
+    color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-brand {
+    --bs-text-opacity: 1;
+    --bs-brand-rgb:231,28,55;
+    color: rgba(var(--bs-brand-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-light {
+    --bs-text-opacity: 1;
+    --bs-light-rgb: 206, 212,218;
+    color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
+}
+
+.brand-secondary {
+  background-color: $white;
+  border-color: $gray-600 !important;
+  color: $brand;
+  @include button-hover-radial-out(transparent, $gray-200 , $gray-800)  
+}

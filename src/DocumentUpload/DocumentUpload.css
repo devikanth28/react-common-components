@@ -1,0 +1,97 @@
+.main-container {
+    min-height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.select-bar {
+    height: 30px;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.scanner-container {
+    margin-top: 10px;
+}
+
+.image-container {
+    width: 95%;
+    background-color: rgb(212, 209, 209);
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+.scanned-image {
+    margin-left: 5px;
+    width: 218px;
+    height: 390px;
+}
+
+.close-button {
+    color: black;
+    background-color: rgb(177, 16, 16);
+    font-style: bold;
+    margin-left: 5px;
+}
+
+.scan-button {
+    background-color: rgb(55, 186, 238);
+    color: black;
+    width: 150px;
+    font-size: large;
+}
+
+li {
+    list-style-type: none;
+}
+
+.image-url-container {
+    display: flex;
+}
+
+.remove-button {
+    font-weight: 700;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.remove-button :hover {
+    color: red;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #2d9de7;
+    border-radius: 50%;
+    width: 10px;
+    height: 15px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.file-name-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    overflow-x: wrap;
+}
+
+.upload-button {
+    background-color: orange;
+}

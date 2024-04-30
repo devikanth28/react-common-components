@@ -1,0 +1,12 @@
+export function ViewIconButton(props: any): React.JSX.Element;
+export function EditIconButton(props: any): React.JSX.Element;
+export function DeleteIconButton(props: any): React.JSX.Element;
+export function CloneIconButton(props: any): React.JSX.Element;
+export const AddIconButton: React.ForwardRefExoticComponent<React.RefAttributes<any>>;
+export function ApproveIconButton(props: any): React.JSX.Element;
+export function RemoveIconButton(props: any): React.JSX.Element;
+export function SaveIconButton(props: any): React.JSX.Element;
+export function CancelIconButton(props: any): React.JSX.Element;
+export function RecallIconButton(props: any): React.JSX.Element;
+export function TextButton(props: any): React.JSX.Element;
+import React from "react";

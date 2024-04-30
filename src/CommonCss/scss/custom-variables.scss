@@ -1,0 +1,84 @@
+$line-height-sm:              1.143 !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-ssm: $font-size-base * .75 !default;
+$font-size-sssm: $font-size-base * .65 !default;
+
+
+// color codes
+$gray-50: #EBEBEB !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343A40 !default;
+$gray-900: #212529 !default;
+$gray-1100: #353A3F !default;
+$gray-1200: #afb5ba !default;
+$gray-1300: #656D75 !default;
+$gray-1400: #dee2e680 !default;
+
+
+$white: #fff !default;
+$white-100:#E4E8EC !default;
+
+
+
+$black: #080808 !default;
+$black-700: #060606 !default;
+$black-800: #070707 !default;
+$black-900: #313131 !default;
+
+$brand: #E71C37 !default;
+$brand-900: #DB1731 !default;
+$brand-800: #CA152D !default;
+
+$red-100:#FDECE9 !default;
+$red-900: #e84f2e !default;
+
+
+$green-900:#11B094 !default;
+$green-800:#10A489 !default;
+$green-700: #08CE73 !default;
+
+$blue:    #1C3FFD !default;
+$blue-900: #0226EE !default;
+
+$info: #2699FB !default;
+$info-900 : #148FFA !default;
+$info-800 : #E9F5FF !default;
+
+$warning:   #F88441 !default;
+$warning-900: #F7752A !default;
+// Font-related Styles
+
+$alert-bg-scale-custom : -80% !default;
+$alert-border-scale-custom : -50% !default;
+$alert-color-scale-custom: 60% !default;
+
+
+$font-weight-bold: 500;
+$shadow-sm:  0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+$shadow-focus: 0 0 0 0.25rem rgba(197,201,205,.5);
+
+$stacked-image-height : 56px;
+$stacked-image-width : 56px;
+
+
+// button colors 
+
+$customdark: ("defaultbackground": $gray-800, "hover": $black, "Disabled": $black-800,'Active': $black ,'ActiveBorder':$black-700,'text-color':$white);
+$custombrand: ("defaultbackground": $brand, "hover": $brand-800, "Disabled": $brand-900,'Active': $brand ,'ActiveBorder':$brand-800,'text-color':$white);
+$customsuccess: ("defaultbackground": $green-900, "hover": $green-800, "Disabled": $green-800,'Active': $green-900 ,'ActiveBorder':$green-800,'text-color':$black);
+$customprimary: ("defaultbackground": $blue, "hover": $blue-900, "Disabled": #082DFD,'Active': $blue ,'ActiveBorder':$blue-900,'text-color':$white);
+$customsecondary: ("defaultbackground": $gray-600, "hover": $gray-1300, "Disabled": $gray-1300,'Active': $gray-600 ,'ActiveBorder':$gray-1300,'text-color':$white);
+$customwarning: ("defaultbackground": $warning, "hover": $warning-900, "Disabled": $warning-900,'Active': $warning ,'ActiveBorder':$warning-900,'text-color':$black);
+$custominfo: ("defaultbackground": $info, "hover": $info-900, "Disabled": $info-900,'Active': $info ,'ActiveBorder':$info-900,'text-color':$black);
+$customlight: ("defaultbackground": $gray-100, "hover": $white-100, "Disabled": $white-100,'Active': $gray-100 ,'ActiveBorder':$white-100,'text-color':$black);
+$customsecondarylight: ("defaultbackground":$gray-300, "hover":"#DEE2E680","Disabled":"#DEE2E680",'Active': $gray-300 ,'ActiveBorder':$gray-300,'text-color':$gray-800);
+$custom-colors:('primary':$customprimary , 'secondary':$customsecondary, 'success': $customsuccess , 'info':$custominfo ,'warning' : $customwarning,'brand':$custombrand , 'light':$customlight , 'dark':$customdark,'secondarylight':$customsecondarylight);

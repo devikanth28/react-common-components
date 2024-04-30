@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json.schemastore.org/tsconfig",
+    
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop" : true,
+        "jsx": "preserve",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "esnext",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist",
+        "allowJs": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+
+}

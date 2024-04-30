@@ -1,0 +1,2 @@
+import{a as t}from"./defineProperty-475080e2.js";function e(){return{isNotEmpty:function(e){var n=!0;if(null==e||"undefined"==e||null==e||"null"==e)return!1;switch(t(e)){case"number":n=e.toString().length>0;break;case"string":n=e.trim().length>0;break;case"object":if(e instanceof Array){n=e.length>0;break}n=Object.keys(e).length>0}return n},isEmpty:function(t){return!this.isNotEmpty(t)}}}export{e as V};
+//# sourceMappingURL=Validate-0932f172.js.map

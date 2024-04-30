@@ -1,0 +1,2 @@
+import{d as t,e as r}from"./createClass-2eab1421.js";function n(){try{var t=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){})))}catch(t){}return(n=function(){return!!t})()}function e(e){var o=n();return function(){var n,c=t(e);if(o){var a=t(this).constructor;n=Reflect.construct(c,arguments,a)}else n=c.apply(this,arguments);return r(this,n)}}export{e as _};
+//# sourceMappingURL=createSuper-5de7ef67.js.map
